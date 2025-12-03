@@ -1,2 +1,60 @@
 # Calculator-Python-Project
-This Python Calculator project performs basic arithmetic operations such as addition, subtraction, multiplication, and division. It takes user input and uses conditional statements to select operations. The project provides quick, accurate calculations and demonstrates logical decision-making in Python.
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Error! Division by zero."
+    return a / bl
+
+def modulus(a, b):
+    return a % b
+
+def power(a, b):
+    return a ** b
+
+
+print("====== SIMPLE CALCULATOR ======")
+
+while True:
+    print("\nSelect Operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Modulus")
+    print("6. Power")
+    print("7. Exit")
+
+    choice = input("Enter choice (1-7): ")
+
+    if choice == '7':
+        print("Exiting Calculator... Goodbye!")
+        break
+
+    if choice in ('1', '2', '3', '4', '5', '6'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print("Result =", add(num1, num2))
+        elif choice == '2':
+            print("Result =", subtract(num1, num2))
+        elif choice == '3':
+            print("Result =", multiply(num1, num2))
+        elif choice == '4':
+            print("Result =", divide(num1, num2))
+        elif choice == '5':
+            print("Result =", modulus(num1, num2))
+        elif choice == '6':
+            print("Result =", power(num1, num2))
+
+    else:
+        print("Invalid Input! Please enter a number between 1 and 7.")
